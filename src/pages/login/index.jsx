@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import useTitle from "../../hooks/useTitle";
-import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "./login.module.scss";
 
 const Login = () => {
   useTitle("Login - Bani");
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className={styles.login}>
@@ -38,8 +39,22 @@ const Login = () => {
               <span>Forgot Password?</span>
             </div>
             <div className={styles["form__field--input"]}>
-              <input type="password" id="password" placeholder="Password" />
-              <AiOutlineEye className={styles.eye_icon} />
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                placeholder="Password"
+              />
+              {showPassword ? (
+                <AiOutlineEyeInvisible
+                  className={styles.eye_icon}
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              ) : (
+                <AiOutlineEye
+                  className={styles.eye_icon}
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              )}
             </div>
           </div>
           <button>Log in</button>
