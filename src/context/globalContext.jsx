@@ -3,14 +3,16 @@ import React, { createContext, useState } from "react";
 const GlobalContext = createContext(null);
 
 export const GlobalContextProvider = ({ children }) => {
-  const [data, setData] = useState(false);
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || null
+  );
   const [error, setError] = useState("");
 
   return (
     <GlobalContext.Provider
       value={{
-        data,
-        setData,
+        user,
+        setUser,
         error,
         setError,
       }}

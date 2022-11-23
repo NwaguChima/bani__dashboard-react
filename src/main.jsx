@@ -7,12 +7,12 @@ import "./styles/index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <GlobalContextProvider>
+    <GlobalContextProvider>
+      <BrowserRouter>
+        <Routes>
           <Route path="/*" element={<App />} />
-        </GlobalContextProvider>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </GlobalContextProvider>
   </React.StrictMode>
 );

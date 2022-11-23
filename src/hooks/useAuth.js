@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import GlobalContext from "../context/globalContext";
 
 const useAuth = () => {
-  const [user, setUser] = useState(null);
+  const { user, setUser } = useContext(GlobalContext);
 
   return { user, setUser };
 };

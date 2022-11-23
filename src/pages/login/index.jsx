@@ -1,15 +1,36 @@
 import React, { useState } from "react";
 import useTitle from "../../hooks/useTitle";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { DASHBOARD_ROUTE } from "../../utils/constants";
 import styles from "./login.module.scss";
+import useAuth from "../../hooks/useAuth";
+import Spinner from "../../components/spinner/Spinner";
 
 const Login = () => {
   useTitle("Login - Bani");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const { user, setUser } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
+
+    const user = {
+      email,
+      password,
+    };
+
+    setUser(user);
+    localStorage.setItem("user", JSON.stringify(user));
+
+    setEmail("");
+    setPassword("");
+
+    navigate(DASHBOARD_ROUTE);
+    return;
   };
 
   return (
@@ -23,8 +44,9 @@ const Login = () => {
           {/* A link tag to be used instead of span, if to be implemented */}
           Don't have an account? <span>Get Started</span>
         </p>
+        <Spinner />
 
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form__field}>
             <div className={styles["form__field--label"]}>
               <label htmlFor="email">Email</label>
@@ -33,6 +55,9 @@ const Login = () => {
               <input
                 type="email"
                 id="email"
+                value={email}
+                required
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="E.g: victor.onazi@getbani.com"
               />
             </div>
@@ -47,6 +72,9 @@ const Login = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
+                value={password}
+                required
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
               />
               {showPassword ? (
@@ -62,7 +90,7 @@ const Login = () => {
               )}
             </div>
           </div>
-          <button onClick={handleSubmit}>Log in</button>
+          <button type="submit">Log in</button>
         </form>
       </main>
     </div>
