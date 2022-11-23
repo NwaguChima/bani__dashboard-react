@@ -1,5 +1,6 @@
 import React from "react";
 import useTitle from "../../hooks/useTitle";
+import { AiOutlineEye } from "react-icons/ai";
 import styles from "./login.module.scss";
 
 const Login = () => {
@@ -18,22 +19,27 @@ const Login = () => {
         </p>
 
         <form className={styles.form}>
-          <div>
-            <div>
+          <div className={styles.form__field}>
+            <div className={styles["form__field--label"]}>
               <label htmlFor="email">Email</label>
             </div>
-            <div>
-              <input type="email" id="email" />
+            <div className={styles["form__field--input"]}>
+              <input
+                type="email"
+                id="email"
+                placeholder="E.g: victor.onazi@getbani.com"
+              />
             </div>
           </div>
-          <div>
-            <div>
+          <div className={styles.form__field}>
+            <div className={styles["form__field--label"]}>
               <label htmlFor="password">Password</label>
               {/* A link tag to be used if to be implemented */}
               <span>Forgot Password?</span>
             </div>
-            <div>
-              <input type="password" id="password" />
+            <div className={styles["form__field--input"]}>
+              <input type="password" id="password" placeholder="Password" />
+              <AiOutlineEye className={styles.eye_icon} />
             </div>
           </div>
           <button>Log in</button>

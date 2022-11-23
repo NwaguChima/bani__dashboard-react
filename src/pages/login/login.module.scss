@@ -35,6 +35,7 @@
       font-size: 2.4rem;
       text-align: center;
       padding-bottom: 3.4rem;
+      font-weight: 500;
     }
 
     p {
@@ -45,4 +46,72 @@
       }
     }
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    padding-bottom: 3.2rem;
+
+    &--label {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1.2rem;
+      font-size: 1.4rem;
+      color: #777;
+
+      span {
+        color: varr.$blue__color;
+      }
+    }
+
+    &--input {
+      border: 1px solid varr.$grey__color;
+      border-radius: varr.$radius;
+      -webkit-border-radius: varr.$radius;
+      -moz-border-radius: varr.$radius;
+      -ms-border-radius: varr.$radius;
+      -o-border-radius: varr.$radius;
+
+      display: flex;
+      align-items: center;
+
+      font-size: varr.$main__font;
+      color: varr.$text__color;
+      height: 4.4rem;
+      padding: 1.3rem 1.6rem;
+
+      border-radius: varr.$radius;
+      -webkit-border-radius: varr.$radius;
+      -moz-border-radius: varr.$radius;
+      -ms-border-radius: varr.$radius;
+      -o-border-radius: varr.$radius;
+
+      input {
+        border: none;
+        outline: 1px solid transparent;
+        background-color: transparent;
+        height: 100%;
+        width: 90%;
+        font-family: varr.$text-font;
+
+        &::placeholder {
+          color: varr.$grey__color;
+        }
+      }
+    }
+  }
+}
+
+.eye_icon {
+  width: 10%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: varr.$grey__color;
+  // font-size: 9rem;
+  cursor: pointer;
 }
