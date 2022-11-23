@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
-import "./App.module.scss";
 import RequireAuth from "./components/AuthCheck";
 import { DASHBOARD_ROUTE, LOGIN_ROUTE } from "./utils/constants";
+import useAuth from "./hooks/useAuth";
+import "./App.module.scss";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const { user } = useAuth();
 
   return (
     <Routes>
