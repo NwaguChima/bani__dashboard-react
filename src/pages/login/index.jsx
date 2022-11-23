@@ -7,6 +7,11 @@ const Login = () => {
   useTitle("Login - Bani");
   const [showPassword, setShowPassword] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  };
+
   return (
     <div className={styles.login}>
       <header className={styles.login__header}>
@@ -57,7 +62,7 @@ const Login = () => {
               )}
             </div>
           </div>
-          <button>Log in</button>
+          <button onClick={handleSubmit}>Log in</button>
         </form>
       </main>
     </div>

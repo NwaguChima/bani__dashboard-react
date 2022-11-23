@@ -103,6 +103,51 @@
       }
     }
   }
+
+  button {
+    height: 4.4rem;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: varr.$blue__color;
+    color: varr.$white__bg;
+    font-size: 1.4rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+
+    border-radius: varr.$radius;
+    -webkit-border-radius: varr.$radius;
+    -moz-border-radius: varr.$radius;
+    -ms-border-radius: varr.$radius;
+    -o-border-radius: varr.$radius;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    &:hover {
+      background-color: varr.$blue__color--dark;
+      transform: translateY(-1px);
+      -webkit-transform: translateY(-1px);
+      -moz-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+      -o-transform: translateY(-1px);
+    }
+
+    &:active {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-0.5px);
+      -webkit-transform: translateY(-0.5px);
+      -moz-transform: translateY(-0.5px);
+      -ms-transform: translateY(-0.5px);
+      -o-transform: translateY(-0.5px);
+    }
+  }
 }
 
 .eye_icon {
