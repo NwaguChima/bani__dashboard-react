@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
-import styles from "./signup.module.scss";
+import styles from "./login.module.scss";
 
 const Login = () => {
   useTitle("Login - Bani");
@@ -12,13 +11,13 @@ const Login = () => {
         <img src="/public/bani.svg" alt="logo image" />
       </header>
       <main className={styles.login__body}>
-        <h1 className={styles.login__title}>Log in to your account</h1>
+        <h1>Log in to your account</h1>
         <p>
           {/* A link tag to be used instead of span, if to be implemented */}
           Don't have an account? <span>Get Started</span>
         </p>
 
-        <form>
+        <form className={styles.form}>
           <div>
             <div>
               <label htmlFor="email">Email</label>
