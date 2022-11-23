@@ -1,0 +1,97 @@
+@use "../../styles/variables.scss" as varr;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: varr.$white__bg;
+  height: 7.8rem;
+
+  padding: 1.6rem 2.4rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 1.6rem 1rem;
+  }
+
+  &__logo {
+    width: 7.7rem;
+
+    @media screen and (max-width: 450px) {
+      width: 5rem;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      cursor: pointer;
+
+      @media screen and (max-width: 450px) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  background-color: #f5f6fa;
+  padding: 0.8rem 1.2rem;
+  border-radius: varr.$radius;
+  -webkit-border-radius: varr.$radius;
+  -moz-border-radius: varr.$radius;
+  -ms-border-radius: varr.$radius;
+  -o-border-radius: varr.$radius;
+
+  &__initials {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    background-color: varr.$blue__color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 1rem;
+  }
+
+  span {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+
+    h4 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 14ch;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
