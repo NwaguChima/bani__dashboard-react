@@ -12,7 +12,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const { user, setUser } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const { setUser } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -26,11 +27,12 @@ const Login = () => {
     setUser(user);
     localStorage.setItem("user", JSON.stringify(user));
 
-    setEmail("");
-    setPassword("");
+    setLoading(true);
 
-    navigate(DASHBOARD_ROUTE);
-    return;
+    setTimeout(() => {
+      setLoading(false);
+      navigate(DASHBOARD_ROUTE);
+    }, 2000);
   };
 
   return (
@@ -44,7 +46,7 @@ const Login = () => {
           {/* A link tag to be used instead of span, if to be implemented */}
           Don't have an account? <span>Get Started</span>
         </p>
-        <Spinner />
+        {loading ? <Spinner /> : null}
 
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form__field}>
