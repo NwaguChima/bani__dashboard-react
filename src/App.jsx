@@ -1,5 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
@@ -14,7 +13,7 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<Navigate to={user ? "dashboard" : "login"} />}
+        element={<Navigate to={user ? DASHBOARD_ROUTE : LOGIN_ROUTE} />}
       />
 
       <Route path={LOGIN_ROUTE} element={<Login />} />
