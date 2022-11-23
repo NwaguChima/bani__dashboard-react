@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import NotificationIcon from "../../assets/icons/notification.svg";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  const [logout, setLogout] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
+
   return (
     <header className={styles.header}>
       <img
@@ -19,7 +28,10 @@ const Header = () => {
             <h4>JT Industry Limited</h4>
             <p>JamesT@gmail.com</p>
           </div>
-          <span>
+          <div className={`${styles.dropdown} ${logout ? styles.show : ""}`}>
+            <p onClick={handleLogout}>Logout</p>
+          </div>
+          <span onClick={() => setLogout(!logout)}>
             <HiOutlineChevronDown />
           </span>
         </div>

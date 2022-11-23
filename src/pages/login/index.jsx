@@ -29,10 +29,12 @@ const Login = () => {
 
     setLoading(true);
 
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false);
       navigate(DASHBOARD_ROUTE);
     }, 2000);
+
+    return () => clearTimeout(timer);
   };
 
   return (

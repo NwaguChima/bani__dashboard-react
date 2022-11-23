@@ -6,6 +6,7 @@
   align-items: center;
   background-color: varr.$white__bg;
   height: 7.8rem;
+  position: relative;
 
   padding: 1.6rem 2.4rem;
 
@@ -94,4 +95,43 @@
       font-size: 1.2rem;
     }
   }
+}
+
+.dropdown {
+  position: absolute;
+  top: 6.8rem;
+  right: 3rem;
+  background-color: varr.$blue__color;
+  height: 4rem;
+  width: 10rem;
+  border-radius: varr.$radius;
+  -webkit-border-radius: varr.$radius;
+  -moz-border-radius: varr.$radius;
+  -ms-border-radius: varr.$radius;
+  -o-border-radius: varr.$radius;
+
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+
+  visibility: hidden;
+  opacity: 0;
+
+  p {
+    color: white;
+  }
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  top: 7.8rem;
 }
