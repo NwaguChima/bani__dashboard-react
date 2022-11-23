@@ -1,5 +1,6 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { LOGIN_ROUTE } from "../utils/constants";
 
 const AuthCheck = () => {
   const location = useLocation();
@@ -8,7 +9,7 @@ const AuthCheck = () => {
   const content = user ? (
     <Outlet />
   ) : (
-    <Navigate to="/login" state={{ from: location }} replace />
+    <Navigate to={LOGIN_ROUTE} state={{ from: location }} replace />
   );
 
   return content;

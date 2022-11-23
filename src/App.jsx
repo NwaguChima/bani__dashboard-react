@@ -5,6 +5,7 @@ import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import "./App.module.scss";
 import RequireAuth from "./components/AuthCheck";
+import { DASHBOARD_ROUTE, LOGIN_ROUTE } from "./utils/constants";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -16,8 +17,8 @@ function App() {
         element={<Navigate to={user ? "dashboard" : "login"} />}
       />
 
-      <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<RequireAuth />}>
+      <Route path={LOGIN_ROUTE} element={<Login />} />
+      <Route path={DASHBOARD_ROUTE} element={<RequireAuth />}>
         <Route index element={<Dashboard />} />
       </Route>
     </Routes>
