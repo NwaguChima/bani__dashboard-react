@@ -1,5 +1,6 @@
 @use "../../styles/variables.scss" as varr;
 
 .sidebar {
-  background-color: rebeccapurple;
+  background-color: varr.$white__bg;
+  min-height: calc(100vh - 7.8rem);
 }
