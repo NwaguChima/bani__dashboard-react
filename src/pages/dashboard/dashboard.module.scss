@@ -1,0 +1,6 @@
+@use "../../styles/variables.scss" as varr;
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+}
