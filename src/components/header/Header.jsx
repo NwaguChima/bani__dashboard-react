@@ -3,10 +3,12 @@ import NotificationIcon from "../../assets/icons/notification.svg";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
   const [logout, setLogout] = useState(false);
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -26,7 +28,7 @@ const Header = () => {
           <p className={styles.details__initials}>JT</p>
           <div className={styles.details__name}>
             <h4>JT Industry Limited</h4>
-            <p>JamesT@gmail.com</p>
+            <p>{user.email}</p>
           </div>
           <div className={`${styles.dropdown} ${logout ? styles.show : ""}`}>
             <p onClick={handleLogout}>Logout</p>

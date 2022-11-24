@@ -1,5 +1,5 @@
 @use "../../styles/variables.scss" as varr;
 
 .mainDash {
-  background-color: red;
+  background-color: varr.$main__bg;
 }
