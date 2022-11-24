@@ -63,7 +63,7 @@ export const sidebarData = {
       isNew: true,
     },
   ],
-  footer: [
+  settings: [
     {
       name: "Live Mode",
       icon: liveModeIcon,

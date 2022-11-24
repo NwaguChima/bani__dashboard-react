@@ -5,25 +5,35 @@ import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
   return (
-    <aside className={styles.sidebar}>
-      <div className={styles.sidebar__category}>
+    <nav className={styles.sidebar}>
+      <ul className={styles.sidebar__category}>
         {sidebarData.general.map(({ name, icon, isNew }) => (
           <SidebarItem name={name} icon={icon} isNew={isNew} />
         ))}
-      </div>
-      <div className={styles.sidebar__category}>
+      </ul>
+      <ul className={styles.sidebar__category}>
         <h5>BUSINESS</h5>
         {sidebarData.business.map(({ name, icon, isNew }) => (
           <SidebarItem name={name} icon={icon} isNew={isNew} />
         ))}
-      </div>
-      <div className={styles.sidebar__category}>
+      </ul>
+      <ul className={styles.sidebar__category}>
         <h5>PAYMENTS</h5>
         {sidebarData.payments.map(({ name, icon, isNew }) => (
+          <SidebarItem
+            name={name}
+            icon={icon}
+            isNew={isNew}
+            active={name === "Virtual Accounts"}
+          />
+        ))}
+      </ul>
+      <ul className={`${styles.sidebar__category} ${styles.settings}`}>
+        {sidebarData.settings.map(({ name, icon, isNew }) => (
           <SidebarItem name={name} icon={icon} isNew={isNew} />
         ))}
-      </div>
-    </aside>
+      </ul>
+    </nav>
   );
 };
 

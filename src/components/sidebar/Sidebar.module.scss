@@ -4,6 +4,8 @@
   background-color: varr.$white__bg;
   min-height: calc(100vh - 7.8rem);
   padding: varr.$main__padding;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (max-width: 450px) {
     padding: 1.6rem 1rem;
@@ -15,7 +17,7 @@
       font-weight: 500;
       line-height: 1.2rem;
       margin-bottom: 2.2rem;
-      margin-top: 3.3rem;
+      margin-top: 1.3rem;
       letter-spacing: 1.5px;
     }
   }
@@ -27,6 +29,12 @@
   color: #65717c;
   margin-bottom: 2rem;
   cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 
   img {
     margin-right: 1.3rem;
@@ -45,12 +53,21 @@
       margin-top: 0.3rem;
     }
   }
+
+  &:hover {
+    padding-left: 0.5rem;
+  }
 }
 
 .active {
-  // color: varr.$blue__color;
+  color: varr.$blue__color;
+  padding-left: 0.5rem;
 }
 
 .new {
   align-self: flex-start;
+}
+
+.settings {
+  margin-top: auto;
 }
