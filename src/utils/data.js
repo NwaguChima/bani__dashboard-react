@@ -16,68 +16,68 @@ export const sidebarData = {
     {
       name: "Welcome",
       icon: welcomeIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Compliance",
       icon: complianceIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Overview",
       icon: overviewIcon,
-      new: false,
+      isNew: false,
     },
   ],
   business: [
     {
       name: "Products",
       icon: productsIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Customers",
       icon: customersIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Orders",
       icon: ordersIcon,
-      new: false,
+      isNew: false,
     },
   ],
   payments: [
     {
       name: "Wallets",
       icon: walletsIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Transactions",
       icon: transactionsIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Virtual Accounts",
       icon: virtualAccountsIcon,
-      new: true,
+      isNew: true,
     },
   ],
   footer: [
     {
       name: "Live Mode",
       icon: liveModeIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Settings",
       icon: settingsIcon,
-      new: false,
+      isNew: false,
     },
     {
       name: "Audit Logs",
       icon: auditLogsIcon,
-      new: false,
+      isNew: false,
     },
   ],
 };
