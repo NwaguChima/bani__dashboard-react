@@ -4,3 +4,33 @@
   background-color: varr.$white__bg;
   min-height: calc(100vh - 7.8rem);
 }
+
+.item {
+  display: flex;
+  align-items: center;
+  color: #65717c;
+
+  img {
+    margin-right: 1.3rem;
+    height: 2rem;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 1.2rem;
+      color: #02ba81;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+.active {
+  // color: varr.$blue__color;
+}
+
+.new {
+  align-self: flex-start;
+}
