@@ -19,12 +19,18 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<Navigate to={user ? DASHBOARD_ROUTE : LOGIN_ROUTE} />}
+        element={
+          <Navigate
+            to={
+              user ? `${DASHBOARD_ROUTE}/${VIRTUAL_ACCOUNT_ROUTE}` : LOGIN_ROUTE
+            }
+          />
+        }
       />
 
       <Route path={LOGIN_ROUTE} element={<Login />} />
       <Route path={DASHBOARD_ROUTE} element={<RequireAuth />}>
-        <Route path="/*" element={<Dashboard />}>
+        <Route element={<Dashboard />}>
           <Route
             index
             path={VIRTUAL_ACCOUNT_ROUTE}
