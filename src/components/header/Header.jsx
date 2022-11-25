@@ -4,6 +4,7 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 import useAuth from "../../hooks/useAuth";
+import Logo from "../../assets/bani.svg";
 
 const Header = () => {
   const [logout, setLogout] = useState(false);
@@ -17,11 +18,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <img
-        src="/public/bani.svg"
-        alt="logo image"
-        className={styles.header__logo}
-      />
+      <img src={Logo} alt="logo image" className={styles.header__logo} />
       <div className={styles.header__profile}>
         <img src={NotificationIcon} alt="notification" />
         <div className={styles.details}>

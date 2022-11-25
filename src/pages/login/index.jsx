@@ -6,6 +6,7 @@ import { DASHBOARD_ROUTE, VIRTUAL_ACCOUNT_ROUTE } from "../../utils/constants";
 import styles from "./login.module.scss";
 import useAuth from "../../hooks/useAuth";
 import Spinner from "../../components/spinner/Spinner";
+import Logo from "../../assets/bani.svg";
 
 const Login = () => {
   useTitle("Login - Bani");
@@ -40,7 +41,7 @@ const Login = () => {
   return (
     <div className={styles.login}>
       <header className={styles.login__header}>
-        <img src="/public/bani.svg" alt="logo image" />
+        <img src={Logo} alt="logo image" />
       </header>
       <main className={styles.login__body}>
         <h1>Log in to your account</h1>
