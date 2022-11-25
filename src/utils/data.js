@@ -17,16 +17,19 @@ export const sidebarData = {
       name: "Welcome",
       icon: welcomeIcon,
       isNew: false,
+      route: "/welcome",
     },
     {
       name: "Compliance",
       icon: complianceIcon,
       isNew: false,
+      route: "/compliance",
     },
     {
       name: "Overview",
       icon: overviewIcon,
       isNew: false,
+      route: "/overview",
     },
   ],
   business: [
@@ -34,16 +37,19 @@ export const sidebarData = {
       name: "Products",
       icon: productsIcon,
       isNew: false,
+      route: "/products",
     },
     {
       name: "Customers",
       icon: customersIcon,
       isNew: false,
+      route: "/customers",
     },
     {
       name: "Orders",
       icon: ordersIcon,
       isNew: false,
+      route: "/orders",
     },
   ],
   payments: [
@@ -51,16 +57,19 @@ export const sidebarData = {
       name: "Wallets",
       icon: walletsIcon,
       isNew: false,
+      route: "/wallets",
     },
     {
       name: "Transactions",
       icon: transactionsIcon,
       isNew: false,
+      route: "/transactions",
     },
     {
       name: "Virtual Accounts",
       icon: virtualAccountsIcon,
       isNew: true,
+      route: "/virtual-accounts",
     },
   ],
   settings: [
@@ -68,16 +77,19 @@ export const sidebarData = {
       name: "Live Mode",
       icon: liveModeIcon,
       isNew: false,
+      route: "/live-mode",
     },
     {
       name: "Settings",
       icon: settingsIcon,
       isNew: false,
+      route: "/settings",
     },
     {
       name: "Audit Logs",
       icon: auditLogsIcon,
       isNew: false,
+      route: "/audit-logs",
     },
   ],
 };

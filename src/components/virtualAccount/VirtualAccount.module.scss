@@ -1,5 +1,6 @@
 @use "../../styles/variables.scss" as varr;
 
-.mainDash {
+.virtual {
   background-color: varr.$main__bg;
+  padding: varr.$main__padding;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useTitle from "../../hooks/useTitle";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { DASHBOARD_ROUTE } from "../../utils/constants";
+import { DASHBOARD_ROUTE, VIRTUAL_ACCOUNT_ROUTE } from "../../utils/constants";
 import styles from "./login.module.scss";
 import useAuth from "../../hooks/useAuth";
 import Spinner from "../../components/spinner/Spinner";
@@ -31,7 +31,7 @@ const Login = () => {
 
     const timer = setTimeout(() => {
       setLoading(false);
-      navigate(DASHBOARD_ROUTE);
+      navigate(`${DASHBOARD_ROUTE}/${VIRTUAL_ACCOUNT_ROUTE}`);
     }, 2000);
 
     return () => clearTimeout(timer);
