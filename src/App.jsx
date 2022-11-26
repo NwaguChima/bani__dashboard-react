@@ -12,6 +12,7 @@ import useAuth from "./hooks/useAuth";
 import "./App.module.scss";
 import VirtualAccount from "./components/virtualAccount/VirtualAccount";
 
+// main app
 function App() {
   const { user } = useAuth();
 
